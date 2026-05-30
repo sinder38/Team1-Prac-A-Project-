@@ -49,12 +49,14 @@ Most market-moving event of the week. A large upside or downside surprise could 
 
 KEY EARNINGS THIS WEEK (Earnings Whispers):
 
-- [To be completed]
+- Palo Alto Networks (PANW) — 2 June Tuesday (After Close) — Sector: XLK (Technology / Cybersecurity) — What to watch: Security
+platform growth, customer spending trends, and AI-related product demand.
 
-  - Format
+- Broadcom (AVGO) — 3 June Wednesday (After Close) — Sector: XLK (Technology) — What to watch: AI infrastructure demand, 
+semiconductor revenue growth, and management outlook for enterprise spending.
 
-  - [Company (TICKER)] — Day — Sector: [XLX] — What to watch: [one sentence]
-  - [2–3 entries maximum. Only include earnings that could move an entire sector.]
+- CrowdStrike (CRWD) — 3 June Wednesday (After Close) — Sector: XLK (Technology / Cybersecurity) — What to watch: Cybersecurity 
+spending trends and forward guidance, which may affect sentiment across software and security stocks.
 
 
 CONFIRMED NEWS EVENTS (Reuters / AP):
