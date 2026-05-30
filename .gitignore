@@ -1,0 +1,3 @@
+# Wildignore
+.*
+!.gitignore
