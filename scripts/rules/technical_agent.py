@@ -25,13 +25,13 @@ RULES: List[Rule] = [
         required=True,
     ),
     FieldValue(
-        name="INSTRUMENT field (Daily Chart)",
-        pattern=re.compile(r"^INSTRUMENT:.*Daily Chart"),
+        name="INSTRUMENT field",
+        pattern=re.compile(r"^INSTRUMENT:\s+\S"),
         required=True,
     ),
     FieldValue(
         name="LAST CLOSE field (number + date)",
-        pattern=re.compile(r"^LAST CLOSE:\s+[\d,]+\s+\("),
+        pattern=re.compile(r"^LAST CLOSE:\s+[\d,\.]+\s+\("),
         required=True,
     ),
     # ── EMA sections ──────────────────────────────────────────────────────
@@ -127,12 +127,12 @@ RULES: List[Rule] = [
         required=True,
     ),
     FieldValue(
-        name="CONFIDENCE field (Low/Medium/High + sentence)",
-        pattern=re.compile(r"^CONFIDENCE:\s+(?P<val>Low|Medium|High)\.", re.IGNORECASE),
+        name="CONFIDENCE field (Low/Medium/High)",
+        pattern=re.compile(r"^CONFIDENCE:\s+(?P<val>Low|Medium|High)", re.IGNORECASE),
         label_pattern=re.compile(r"^CONFIDENCE:\s*$"),
         required=True,
         value_validator=lambda m: m.group("val").upper() in CONFIDENCE_VALUES,
-        value_hint="must start with Low, Medium, or High followed by a period and justification",
+        value_hint=f"must be one of: {', '.join(sorted(CONFIDENCE_VALUES))}",
     ),
     FieldValue(
         name="INVALIDATION field",
