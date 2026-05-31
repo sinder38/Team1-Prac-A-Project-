@@ -1,4 +1,4 @@
-TECHNICAL AGENT OUTPUT — WEEK OF MAY 30, 2026
+Technical Agent Output — Week of 30 May 2026
 
 Quick note: The 8 EMA is a short-term average price line. The 21 EMA is a longer-term average. When price sits above both and the 8 is above the 21, the trend is usually up.
 
