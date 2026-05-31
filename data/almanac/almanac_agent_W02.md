@@ -6,7 +6,8 @@ CYCLE CONTEXT: Midterm election year. Q2–Q3 is the "Weak Spot." Almanac foreca
 MONTHLY STATS:
 - S&P 500: ranks #8 of 12 months. Up 61% of the time. Avg +0.3% normally.
 - Midterm year May avg: −0.7% for S&P. This is the active context for 2026.
-- Nasdaq avg +1.1%, ranks #5. Russell 2000 avg +1.3%, ranks #4.
+- Nasdaq avg +1.1%, ranks #5.
+- Russell 2000: avg +1.3%, ranks #4.
 
 SPECIFIC WEEK PATTERN (Memorial Day Week, 26–30 May):
 - Memorial Day week: Dow down 17 of last 29. Bearish lean. Strength: MODERATE.
@@ -22,7 +23,7 @@ SECTOR SIGNALS:
 
 ALMANAC SEASONAL BIAS: Cautiously bearish-neutral.
 PATTERN CONFIDENCE: LOW–MEDIUM. Two conflicting week-level patterns.
-ALMANAC THESIS: Seasonality suggests caution in late May during a midterm year. Technology is the one seasonal bright spot. Banking and Materials face active headwinds. Conflicting week patterns keep confidence low.
+ALMANAC THESIS: "Seasonality suggests caution in late May during a midterm year. Technology is the one seasonal bright spot. Banking and Materials face active headwinds. Conflicting week patterns keep confidence low."
 
 NEXT WEEK CONTEXT (Week of 2–5 June):
 - June ranks #9 S&P, #12 in midterm year — weakest month of the year in 2026.
