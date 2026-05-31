@@ -24,4 +24,10 @@ ALMANAC SEASONAL BIAS: Cautiously bearish-neutral.
 PATTERN CONFIDENCE: LOW–MEDIUM. Two conflicting week-level patterns.
 ALMANAC THESIS: Seasonality suggests caution in late May during a midterm year. Technology is the one seasonal bright spot. Banking and Materials face active headwinds. Conflicting week patterns keep confidence low.
 
+NEXT WEEK CONTEXT (Week of 2–5 June):
+- June ranks #9 S&P, #12 in midterm year — weakest month of the year in 2026.
+- June midterm year avg: S&P −2.1%, Dow −1.8%, Nasdaq −1.5%.
+- New sector signal: Oil/Energy (XLE) seasonal SHORT begins early June.
+- Almanac bias for June: Bearish. Midterm year makes June the worst month of 2026.
+
 Source: Stock Trader's Almanac 2026, pp. 65–66, p. 94, pp. 10–11. Accessed: 30 May 2026.
