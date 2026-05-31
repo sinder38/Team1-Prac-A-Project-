@@ -32,4 +32,4 @@ Our team's wild card observation is that only 57% of S&P 500 stocks are trading 
 
 ## Invalidation Condition
 
-SPX below 7500 or a major NFP surprise that causes yields to spike higher.
+SPX close below 7,350 (trendline and 21 EMA support) or a major NFP surprise that causes yields to spike higher.
