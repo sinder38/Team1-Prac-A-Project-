@@ -1,0 +1,138 @@
+name: agent-checks
+
+on:
+  push:
+    paths:
+      - "data/macro/**"
+      # - 'data/almanac/**'
+      # - 'data/technical/**'
+      # - 'data/llm/**'
+  pull_request:
+    paths:
+      - "data/macro/**"
+      # - 'data/almanac/**'
+      # - 'data/technical/**'
+      # - 'data/llm/**'
+
+jobs:
+  macro-agent:
+    name: Validate macro_agent outputs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run macro_agent format checks
+        run: |
+          set +e
+          failed=0
+          shopt -s nullglob
+          files=(data/macro/macro_agent_W*.md)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "No macro_agent_W*.md files found in data/macro/ — nothing to validate."
+            exit 0
+          fi
+          for f in "${files[@]}"; do
+            echo "::group::$f"
+            python scripts/validate_output.py macro_agent "$f"
+            code=$?
+            echo "::endgroup::"
+            if [ $code -ne 0 ]; then
+              echo "::error file=$f::macro_agent format check failed"
+              failed=1
+            fi
+          done
+          exit $failed
+
+  # almanac-agent:
+  #   name: Validate almanac_agent outputs
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: actions/setup-python@v5
+  #       with:
+  #         python-version: '3.11'
+  #     - name: Run almanac_agent format checks
+  #       run: |
+  #         set +e
+  #         failed=0
+  #         shopt -s nullglob
+  #         files=(data/almanac/almanac_agent_W*.md)
+  #         if [ ${#files[@]} -eq 0 ]; then
+  #           echo "No almanac_agent_W*.md files found in data/almanac/ — nothing to validate."
+  #           exit 0
+  #         fi
+  #         for f in "${files[@]}"; do
+  #           echo "::group::$f"
+  #           python scripts/validate_output.py almanac_agent "$f"
+  #           code=$?
+  #           echo "::endgroup::"
+  #           if [ $code -ne 0 ]; then
+  #             echo "::error file=$f::almanac_agent format check failed"
+  #             failed=1
+  #           fi
+  #         done
+  #         exit $failed
+
+  # technical-agent:
+  #   name: Validate technical_agent outputs
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: actions/setup-python@v5
+  #       with:
+  #         python-version: '3.11'
+  #     - name: Run technical_agent format checks
+  #       run: |
+  #         set +e
+  #         failed=0
+  #         shopt -s nullglob
+  #         files=(data/technical/technical_agent_W*.md)
+  #         if [ ${#files[@]} -eq 0 ]; then
+  #           echo "No technical_agent_W*.md files found in data/technical/ — nothing to validate."
+  #           exit 0
+  #         fi
+  #         for f in "${files[@]}"; do
+  #           echo "::group::$f"
+  #           python scripts/validate_output.py technical_agent "$f"
+  #           code=$?
+  #           echo "::endgroup::"
+  #           if [ $code -ne 0 ]; then
+  #             echo "::error file=$f::technical_agent format check failed"
+  #             failed=1
+  #           fi
+  #         done
+  #         exit $failed
+
+  # llm-agent:
+  #   name: Validate llm_agent outputs
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: actions/setup-python@v5
+  #       with:
+  #         python-version: '3.11'
+  #     - name: Run llm_agent format checks
+  #       run: |
+  #         set +e
+  #         failed=0
+  #         shopt -s nullglob
+  #         files=(data/llm/llm_agent_W*.md)
+  #         if [ ${#files[@]} -eq 0 ]; then
+  #           echo "No llm_agent_W*.md files found in data/llm/ — nothing to validate."
+  #           exit 0
+  #         fi
+  #         for f in "${files[@]}"; do
+  #           echo "::group::$f"
+  #           python scripts/validate_output.py llm_agent "$f"
+  #           code=$?
+  #           echo "::endgroup::"
+  #           if [ $code -ne 0 ]; then
+  #             echo "::error file=$f::llm_agent format check failed"
+  #             failed=1
+  #           fi
+  #         done
+  #         exit $failed
