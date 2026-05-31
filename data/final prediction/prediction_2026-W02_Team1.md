@@ -1,23 +1,18 @@
-# WEEK 2 CONSENSUS BRIEF — FILED: SUN 31 MAY 2026
+# TEAM ALPHA WEEK 2 CONSENSUS BRIEF — FILED: SUN 31 MAY 2026
 
-**REGIME:** Neutral-Bullish with moderate uncertainty. All four AI models remain bullish, supported by strong technical conditions and favorable macro trends. However, seasonal headwinds and upcoming Nonfarm Payrolls (NFP) event risk reduce confidence.
+## REGIME 
+Neutral-Bullish with moderate uncertainty. All four AI models remain bullish, supported by strong technical conditions and favorable macro trends. However, seasonal headwinds and upcoming Nonfarm Payrolls (NFP) event risk reduce confidence.
 
-
-S&P 500(SPX) ............ **UP** ......... **+0.2% to +1.0%** ........ Confidence: **MEDIUM**
-
-Nasdaq 100(NDX) ......... **UP** ......... **+0.5% to +1.5%** ........ Confidence: **MEDIUM**
-
-Russell 2000(IWM) ....... **UP** ......... **0.0% to +1.2%** ........ Confidence: **LOW-MEDIUM**
-
-Gold ............... **FLAT** ....... **-0.5% to +1.0%** ........ Confidence: **LOW**
-
-WTI Crude Oil ...... **FLAT** ....... **-3% to +3%** ............ Confidence: **LOW (Iran risk)**
-
-10-Year Yield ...... **FLAT** ....... **4.35% to 4.55%** ........ Confidence: **MEDIUM**
-
-VIX ................ **FLAT** ....... **15–20 range** ........... Confidence: **MEDIUM**
-
-Bitcoin ............ **UP** ......... **0% to +5%** ............. Confidence: **LOW-MEDIUM**
+| Asset | Direction | Range | Confidence |
+|---|---|---|---|
+| S&P 500 (SPX) | **UP** | +0.2% to +1.0% | **MEDIUM** |
+| Nasdaq 100 (NDX) | **UP** | +0.5% to +1.5% | **MEDIUM** |
+| Russell 2000 (IWM) | **UP** | 0.0% to +1.2% | **LOW-MEDIUM** |
+| Gold | **FLAT** | -0.5% to +1.0% | **LOW** |
+| WTI Crude Oil | **FLAT** | -3% to +3% | **LOW (Iran risk)** |
+| 10-Year Yield | **FLAT** | 4.35% to 4.55% | **MEDIUM** |
+| VIX | **FLAT** | 15–20 range | **MEDIUM** |
+| Bitcoin | **UP** | 0% to +5% | **LOW-MEDIUM** |
 
 ## LEADING SECTOR
 
@@ -42,7 +37,6 @@ Midterm-year seasonality remains unfavorable, with May historically weaker in el
 Only 57% of S&P 500 stocks remain above their 200-day moving average. While the index itself remains technically strong, broader market participation remains relatively narrow. This suggests the rally may be more fragile than headline index performance implies.
 
 
-
 ## INVALIDATION CONDITIONS
 
 Our bullish-neutral thesis is wrong if:
@@ -54,10 +48,3 @@ Our bullish-neutral thesis is wrong if:
 (c) A major inflation surprise shifts Fed expectations toward a more hawkish path
 
 (d) Market breadth deteriorates further while SPX fails to break above 7,500 resistance
-
-
-## Final Prediction
-
-**SPX: +0.2% to +1.0%**
-
-**Direction:** Neutral-Bullish
