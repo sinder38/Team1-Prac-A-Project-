@@ -5,15 +5,19 @@ Date checked: 31 May 2026
 
 ## What this file is for
 
-The LLM horse race is meant to track which AI model was closest to the actual S&P 500 weekly move. Over the sprint weeks, this should show whether ChatGPT, Claude, Gemini, or DeepSeek gives the most useful market forecast.
+This file tracks which AI model gave the closest SPX forecast. Over the sprint weeks, this should help the team see whether ChatGPT, Claude, Gemini, or DeepSeek is giving the most useful market forecast.
 
-## Current status
+## Evidence used
 
-Status: Scoreable from merged R6 evidence
+I used the merged R6 comparison table in:
 
-After PR #12 was merged, the current `main` branch includes raw LLM outputs and a comparison table in `data/llm/`. I used the merged R6 comparison table as the official LLM evidence for this QA check.
+`data/llm/llm_comparison_W2.md`
 
-The actual SPX result was +1.40%. ChatGPT and DeepSeek both included +1.40% inside their predicted SPX range. I chose DeepSeek as the Week 2 winner because its range midpoint is slightly closer to the actual result.
+The actual SPX result from `data/evidence/actuals_W2.md` was:
+
+| Asset | Actual result |
+| --- | ---: |
+| SPX | +1.40% |
 
 ## Week 2 comparison
 
@@ -24,12 +28,18 @@ The actual SPX result was +1.40%. ChatGPT and DeepSeek both included +1.40% insi
 | Gemini | +0.5% to +1.2% | Slightly low |
 | DeepSeek | +0.5% to +1.5% | Hit range and closest midpoint |
 
-## Week 2 record
+## Week 2 winner
+
+Winner: DeepSeek
+
+DeepSeek and ChatGPT both included the actual +1.40% result inside their predicted SPX ranges. I chose DeepSeek as the winner because its midpoint was slightly closer to the actual result.
+
+## Running record
 
 | Sprint | Actual SPX result | Winner | Reason |
 | --- | ---: | --- | --- |
-| Week 2 | +1.40% | DeepSeek | Its SPX range included the actual result and had the closest midpoint |
+| Week 2 | +1.40% | DeepSeek | Hit range and closest midpoint |
 
-## Next sprint improvement
+## QA note
 
-Next sprint, the raw LLM outputs should be committed before the final prediction is locked and the comparison table should clearly state the prediction week. That will make the horse race easier to check.
+Next sprint, the comparison table should clearly state the prediction week and should be committed before the final prediction is locked. This will make the LLM horse race easier to check.

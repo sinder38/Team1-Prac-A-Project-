@@ -2,12 +2,18 @@
 
 Role: R10 QA and Learning Log Lead  
 Checked by: QA Lead  
-Date checked: 31 May 2026  
-Main evidence file: `data/evidence/actuals_W2.md`
+Date checked: 31 May 2026
 
-## Why I am holding the score
+## Evidence checked
 
-The teacher's scoring table gives different points depending on confidence:
+- `data/evidence/actuals_W2.md`
+- `data/llm/llm_comparison_W2.md`
+- `human/human_score_W2.md` from the R7 branch
+- `data/final prediction/prediction_2026-W02_Team1.md` from the R7 branch
+
+## Scoring rule
+
+The teacher's calibration score depends on direction and confidence:
 
 | Confidence | Direction correct? | Score |
 | --- | --- | ---: |
@@ -18,29 +24,45 @@ The teacher's scoring table gives different points depending on confidence:
 | Medium | Wrong | 0 |
 | Low / Uncertain | Wrong | +1 |
 
-I found the actual results in the repo. However, I could not find a valid locked prediction file that was committed before the Week 2 result was known. Some later GitHub evidence shows bullish direction calls, but I should not treat those as the official team prediction unless the locked prediction file is present.
+## Latest actuals available
 
-Because of that, I am holding the final calibration score for now. I can calculate it only after the team provides the original prediction with direction, percentage range, and confidence level.
+From `data/evidence/actuals_W2.md`, the completed market week ended on Friday 29 May 2026:
 
-## Current Week 2 QA status
+| Asset | Actual result |
+| --- | ---: |
+| SPX | +1.40% |
+| NDX | +2.86% |
+| IWM | +1.82% |
 
-| Asset | Locked team prediction found? | Actual result | Direction result | Confidence proof found? | Score used |
-| --- | --- | ---: | --- | --- | ---: |
-| SPX | No | +1.40% | Not fully scoreable | No | N/A |
-| NDX | No | +2.86% | Not fully scoreable | No | N/A |
-| IWM | No | +1.82% | Not fully scoreable | No | N/A |
+## Prediction evidence available
+
+The R7 branch currently has a final prediction file. It was filed on 31 May 2026 and predicts the 1-5 June market week:
+
+| Asset | Direction | Predicted range | Confidence |
+| --- | --- | ---: | --- |
+| SPX | Up | +0.2% to +1.0% | Medium |
+| NDX | Up | +0.5% to +1.5% | Medium |
+| IWM | Up | 0.0% to +1.2% | Low-Medium |
+
+## QA decision
+
+I am not assigning a final calibration score yet. The actuals file currently available is for the week ending 29 May, while the latest final prediction file appears to forecast 1-5 June.
+
+Because the prediction week and actuals week do not clearly match, scoring it now would be misleading. The right QA action is to hold calibration until the matching actual results are available.
+
+## Current calibration status
+
+| Asset | Prediction to track | Matching actual available? | Score |
+| --- | --- | --- | ---: |
+| SPX | Up, +0.2% to +1.0%, Medium confidence | No | N/A |
+| NDX | Up, +0.5% to +1.5%, Medium confidence | No | N/A |
+| IWM | Up, 0.0% to +1.2%, Low-Medium confidence | No | N/A |
 
 ## Result
 
-Direction result: not confirmed from a locked file  
-Calibration score: pending valid locked prediction evidence
+Calibration score: pending  
+Reason: the locked prediction and the available actuals do not refer to the same market week yet.
 
 ## QA note
 
-This log can be updated if the team finds a prediction file that was committed before the deadline and clearly shows:
-
-- SPX, NDX, and IWM direction,
-- percentage range,
-- confidence level.
-
-Until then, I should present Week 2 calibration as not fully scoreable instead of giving points from evidence that may not be the locked prediction.
+For the next calibration update, R10 should compare the 1-5 June actual results against the locked prediction file and then apply the scoring table above.
