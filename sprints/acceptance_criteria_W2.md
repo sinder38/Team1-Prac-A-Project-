@@ -1,6 +1,6 @@
 For a sprint to be considered complete, the following acceptance criteria should be met:
 
-+ The sprint goal is written clearly in [sprint_goal_W01.md](https://github.com/sinder38/Team1-Prac-A-Project-/blob/product-owner-week2/sprint_goal_W01.md)
++ The sprint goal is written clearly in [sprint_goal_W2.md](./sprint_goal_W2.md)
 + The acceptance criteria are documented in acceptance_criteria.md.
 + The prediction file is committed to GitHub before the deadline.
 + The prediction includes SPX, NDX, and IWM direction, percentage range, and confidence level.
