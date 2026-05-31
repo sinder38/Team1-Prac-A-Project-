@@ -3,11 +3,11 @@
 **REGIME:** Neutral-Bullish with moderate uncertainty. All four AI models remain bullish, supported by strong technical conditions and favorable macro trends. However, seasonal headwinds and upcoming Nonfarm Payrolls (NFP) event risk reduce confidence.
 
 
-SPX 500 ............ **UP** ......... **+0.2% to +1.0%** ........ Confidence: **MEDIUM**
+S&P 500(SPX) ............ **UP** ......... **+0.2% to +1.0%** ........ Confidence: **MEDIUM**
 
-Nasdaq 100 ......... **UP** ......... **+0.5% to +1.5%** ........ Confidence: **MEDIUM**
+Nasdaq 100(NDX) ......... **UP** ......... **+0.5% to +1.5%** ........ Confidence: **MEDIUM**
 
-Russell 2000 ....... **UP** ......... **0.0% to +1.2%** ........ Confidence: **LOW-MEDIUM**
+Russell 2000(IWM) ....... **UP** ......... **0.0% to +1.2%** ........ Confidence: **LOW-MEDIUM**
 
 Gold ............... **FLAT** ....... **-0.5% to +1.0%** ........ Confidence: **LOW**
 
