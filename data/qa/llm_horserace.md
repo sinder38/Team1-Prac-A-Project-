@@ -11,7 +11,7 @@ The LLM horse race is meant to track which AI model was closest to the actual S&
 
 Status: Not scoreable yet
 
-I checked the current `main` branch and I could not find the raw outputs for the four LLMs. I also could not find a comparison table showing each model's SPX forecast.
+I checked the current `main` branch and I could not find valid Week 2 raw outputs for the four LLMs. I also saw a later R6 PR with LLM files, but those files appear to forecast the June 1-5 week and mention June 5 NFP, so I cannot use them for the Week 2 horse race.
 
 Because of that, I cannot honestly pick a winning model for Week 2.
 
@@ -28,7 +28,7 @@ Because of that, I cannot honestly pick a winning model for Week 2.
 
 | Sprint | Actual SPX result | Winner | Reason |
 | --- | ---: | --- | --- |
-| Week 2 | +1.40% | N/A | Raw LLM outputs are not in the repo yet |
+| Week 2 | +1.40% | N/A | No valid Week 2 raw LLM outputs found yet |
 
 ## Next sprint improvement
 
