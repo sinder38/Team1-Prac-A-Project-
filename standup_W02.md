@@ -1,201 +1,179 @@
-Standup Notes - Week 2
+Standup Notes – Week 2
 
-Team Updates
-
-R1 - Product Owner
-
+R1 – Product Owner
+Main: Henry
+Support: Georgi
 Done
-
-Completed acceptance_criteria.md
- Completed sprint_goal_W01.md
- Created PowerPoint template for team presentation
- Coordinated workflow with co-Product Owner
-
+Completed required repository documentation, including README.md, LICENSE.md, CONTRIBUTING.md, and CODE_OF_CONDUCT.md.
+Created presentation slides for the team presentation.
+Collaborated closely as co-Product Owners to keep the team aligned and ensure members understood their responsibilities.
+Reviewed submitted pull requests and requested changes where required.
+Organised project content into an appropriate folder structure.
 Doing
-
- Finalising report and presentation materials
- Following up with team members to ensure task completion
- Preparing final submission
-
+Following up with team members to ensure all assigned tasks are completed before the deadline.
+Reviewing project files and supporting evidence.
+Preparing final submission materials.
 Blocked
+Some team members remain unclear about their responsibilities.
+Some team members are absent or unresponsive.
+Project instructions and requirements are occasionally unclear or conflicting.
+High Discord activity makes important communication difficult to track.
 
- Some team members are unclear about responsibilities
- Limited engagement and updates on Discord
- GitHub workflow consistency needs improvement
-
- R5 - Technical Agent Lead
-
+R2 – Scrum Master
+Main: Whitley
+Support: Henry
 Done
-
- Analysed S&P 500 daily chart using 8 EMA and 21 EMA
- Identified support and resistance levels
- Drew trendlines for technical analysis
-
+Monitored sprint progress and team task completion.
+Collected stand-up updates from active contributors.
+Tracked pull request submissions and review status.
+Prepared sprint progress summaries.
 Doing
-
- Preparing chart screenshots
- Finalising technical presentation content
-
+Following up with members who have not submitted updates.
+Coordinating final presentation and submission activities.
+Monitoring completion of outstanding tasks.
 Blocked
+Missing updates from some role holders.
+Team communication challenges due to member inactivity.
 
- Technical verification requires significant time to ensure consistency between analysis and prediction logic
-
-
-
-R8 - Data & Evidence Lead
-
+R3 – Almanac Agent Lead
+Main: Zaw Latt
+Support: Saiko
 Done
-
- Verified prediction table calculations
- Checked market percentage calculations
- Created comparison table between actual market data and previous predictions
-
+Completed Almanac Agent output for Week 2 (almanac_agent_W02.md).
+Analysed cycle context, May vital statistics, Memorial Day week patterns, sector signals, bias, and thesis.
+Stored file in the data/almanac folder.
+Created and submitted pull request for review.
+Prepared presentation slide content.
 Doing
-
- Preparing final evidence for presentation
- Tracking required market assets
-
+Updating analysis with June context for Week 3.
+Preparing presentation script.
 Blocked
+Almanac PDF link on the course website could not be accessed directly and required alternative reference sources.
 
-None reported
-
-
-R7 - Human Score Analyst
-
+R4 – Macro Agent Lead
+Main: Aaron
+Support: Naing
 Done
-
- Reviewed outputs from R3, R4, R5 and R6
- Created Human Score table
- Developed Human Call, confidence level, override paragraph and invalidation condition
- Identified market breadth as the Wild Card insight
- Submitted human_score_W2.md and opened Pull Request
-
+Compiled weekly macroeconomic output using CME FedWatch, Treasury yields, Earnings Whispers, and Trading Economics.
+Gathered information on Federal Reserve expectations, economic events, Treasury yields, and earnings announcements.
+Identified the key macroeconomic driver for the upcoming week.
 Doing
-
-Reviewing Human Score output
-Supporting sprint presentation preparation
-
+Preparing presentation slides.
+Writing speaker notes and presentation explanations.
 Blocked
-Initially required clarification on Human Score responsibilities and integrating evidence from multiple roles
+Verification across multiple data sources is time-consuming.
+Difficulty determining which earnings announcements are most significant.
+
+R5 – Technical Agent Lead
+Main: Markcus
+Support: Naing
+Done
+Analysed SPX using the 8 EMA and 21 EMA.
+Identified support and resistance levels.
+Verified prediction percentages and price levels.
+Created comparison tables between actual outcomes and previous predictions.
+Doing
+Preparing chart screenshots and prediction tables.
+Monitoring market assets for future analysis.
+Blocked
+Double-checking calculations and classifications requires significant time.
+
+R6 – LLM Synthesis Operator
+Main: Minghao
+Support: Saiko, Jayson
+Done
+Synthesised outputs from multiple LLMs to identify overall market sentiment.
+Identified a unanimous bullish AI consensus.
+Contributed evidence supporting Human Score analysis.
+Documented sprint retrospective findings and lessons learned.
+Doing
+Supporting final review of AI-generated predictions.
+Assisting with final presentation materials.
+Blocked
+None reported.
+Sprint Retrospective Highlights
+What Worked Well
+The team successfully avoided automation bias despite a unanimous bullish AI consensus.
+Human Score analysis incorporated additional macro risks to produce a more balanced market outlook.
+The team adapted effectively to the cancellation of the live presentation by producing a standalone presentation deck with detailed speaker notes.
+What Needs Improvement
+Confusion regarding prediction windows delayed progress.
+File naming inconsistencies increased integration workload.
+Action Item
+Introduce a mandatory Friday Pre-Flight Checklist to confirm prediction windows, calendar week numbers, and file naming conventions before analysis begins.
+
+R7 – Human Score Analyst
+Main: Saiko
+Support: Aaron
+Done
+Reviewed outputs from R3, R4, R5, and R6.
+Created the Human Score table.
+Assigned Human Score ratings.
+Developed Human Call, confidence level, override rationale, and invalidation conditions.
+Identified market breadth as the key Wild Card insight.
+Submitted human_score_W02.md.
+Doing
+Reviewing feedback.
+Supporting presentation preparation.
+Ensuring pull request approval and merge.
+Blocked
+Initial uncertainty regarding role responsibilities.
+Required clarification on combining evidence from multiple agents.
+
+R8 – Data & Evidence Lead
+Main: Markcus
+Support: Zaw Latt
+Done
+Verified prediction table calculations.
+Checked market percentage calculations.
+Created comparison tables between actual market data and previous predictions.
+Doing
+Preparing final evidence for presentation.
+Tracking required market assets.
+Blocked
+None reported.
+
+R9 – GitHub & Integration Lead
+Main: Georgi
+Support: Shary
+Done
+Reviewed all submitted pull requests.
+Requested changes where necessary to maintain quality standards.
+Added GitHub Actions to enforce agent output formatting.
+Configured GitHub rulesets to protect the main branch and enforce review workflows.
+Created a project Git tag at the completion of work.
+Organised repository structure and project files.
+Doing
+Monitoring repository health and pull request activity.
+Assisting with final integration and merge activities.
+Blocked
+Some team members have limited Git and GitHub experience.
+Inconsistent file naming conventions required additional review effort.
+
+R10 – QA & Learning Log Lead
+Main: Jason
+Support: Minghao, Sherly, Georgi
+Done
+Completed calibration_log.md.
+Completed llm_horserace.md.
+Completed learning_log_W02.md.
+Verified SPX, NDX, and IWM results.
+Updated LLM Horse Race analysis.
+Identified the closest prediction model.
+Reviewed project evidence and QA documentation.
+Submitted work through pull request.
+Doing
+Monitoring updates to Human Score and prediction files.
+Preparing final QA review.
+Updating calibration records if required.
+Blocked
+Final prediction file has not been fully confirmed.
+Human Score revisions are still pending.
+Calibration scoring cannot be finalised until all evidence is complete.
+Contributors With No Update Submitted
+No missing updates were reported at the time of stand-up compilation. Any late or missing submissions will be documented separately if required.
+
+
 
 Scrum Master Summary
-
-Current team progress is on track. Major deliverables from Product Owner, Technical Analysis, Data & Evidence, and Human Score have been completed. Remaining work includes collecting updates from remaining role holders, finalising presentation materials, and preparing the final submission.  # standup_W02.md
-
-
-
-R1 - Product Owner
-
-Done
-
- Completed README.md, LICENSE.md and CONTRIBUTING.md.
- Created presentation slides.
- Collaborated with co-Product Owner to keep the team aligned.
-Reviewed submitted pull requests and requested changes where required.
- Added GitHub Actions to enforce agent output formatting.
- Created GitHub rulesets to protect the main branch and enforce review workflows.
- Created a Git tag at the end of work.
- Organised project content into folders.
-
-Doing
-
-Following up with team members regarding unfinished tasks.
- Reviewing evidence and project files.
- Preparing final project submission.
-
-Blocked
-
-Some team members are still unclear about their responsibilities.
-Some team members are absent.
-Some team members have limited Git/GitHub knowledge.
- Project instructions occasionally appear unclear or conflicting.
- Excessive Discord activity makes communication difficult.
-
-
-
-R4 - Macro Agent Lead
-
-Done
- Compiled weekly macro output using CME FedWatch, Treasury yields, Earnings Whispers and Trading Economics.
- Gathered data on Fed expectations, economic events, yields and sector earnings.
- Identified the key macro driver for the coming week.
-
-Doing
-
- Preparing presentation slides.
- Writing speaker notes and presentation explanations.
- Blocked
-
- Time-consuming verification of multiple data sources.
- Difficulty determining which earnings announcements were most important.
-
-
-
- R5 - Technical Agent Lead
-
- Done
-
- Analysed SPX chart using 8 EMA and 21 EMA.
- Identified support and resistance levels.
- Verified prediction table percentages and price levels.
- Created comparison table between actual market outcomes and previous predictions.
-
- Doing
-
- Preparing final chart screenshots and prediction tables.
- Monitoring market assets for future analysis.
-
- Blocked
-
- Double-checking calculations and ensuring market classifications match supporting evidence is time-consuming.
-
-
-
-R7 - Human Score Analyst
-
-Done
-
- Reviewed outputs from R3, R4, R5 and R6.
- Created Human Score table.
- Assigned Human Score ratings.
- Developed Human Call, confidence level, override rationale and invalidation condition.
- Identified market breadth as the key Wild Card insight.
- Submitted human_score_W02.md.
-
- Doing
-
- Reviewing feedback.
- Supporting presentation preparation.
- Ensuring pull request approval and merge.
-
-Blocked
-
- Initial uncertainty regarding Human Score responsibilities.
- Required clarification on combining evidence from multiple agents.
-
-
-
-R10 - QA & Learning Log Lead
- Done
-
- Completed calibration_log.md.
- Completed llm_horserace.md.
- Completed learning_log_W02.md.
- Verified SPX, NDX and IWM actual results.
- Updated LLM Horse Race analysis.
- Determined DeepSeek as the closest model for SPX.
- Reviewed project evidence and QA documentation.
- Submitted work through PR #7.
-
- Doing
-
- Monitoring updates to Human Score and final prediction files.
- Preparing final QA review.
- Updating calibration records if required.
-
- Blocked
-
- Final locked prediction file is not yet fully confirmed.
- Human Score file requires additional revisions.
- Calibration scoring cannot be finalized until all evidence is completed.
-
+Overall sprint progress remains on track. Major deliverables from Product Owner, Almanac, Macro, Technical Analysis, LLM Synthesis, Human Score, Data & Evidence, GitHub Integration, and QA roles have been completed or are nearing completion. Remaining work focuses on presentation preparation, final evidence verification, pull request reviews, and final project submission.
