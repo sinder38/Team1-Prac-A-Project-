@@ -112,24 +112,6 @@ team1-prac-a-project/
 
 ---
 
-## The Monday Presentation (20–25 minutes)
-
-**Every role holder speaks.** No silent passengers.
-
-| Time | Role | Content |
-|------|------|---------|
-| 0:00–1:30 | R1 Product Owner | Sprint goal + last week's calibration score |
-| 1:30–3:00 | R8 Data Lead | Week 1 actuals: what we predicted vs. what happened |
-| 3:00–5:00 | R3 Almanac Lead | This week's seasonal context & bias |
-| 5:00–7:00 | R4 Macro Lead | This week's single most important event |
-| 7:00–9:00 | R5 Technical Lead | **Live chart demo** — annotated S&P 500 screenshot |
-| 9:00–11:00 | R6 LLM Operator | AI comparison table — where models agreed & diverged |
-| 11:00–15:00 | **R7 Human Score** (★ most important) | **Our thinking** — the wild card insight no AI raised |
-| 15:00–17:00 | R9 GitHub Lead | Live GitHub repo — commits, evidence, release tag |
-| 17:00–19:00 | R10 QA Lead | Calibration score update + LLM horse race + one change for next sprint |
-
----
-
 ## Resources & References
 
 ### Official Course Materials
