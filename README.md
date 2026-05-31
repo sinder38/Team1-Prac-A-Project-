@@ -15,7 +15,7 @@ This is Team 1's repository for CP3405 Design Thinking 3 (DT3), an educational m
 5. **Makes a prediction** — SPX, NDX, IWM direction + % range + confidence level
 6. **Measures calibration** — Were we right *and* confident, or wrong *but* honest about uncertainty?
 
-By Week 10, we will have a 10-sprint track record of predictions vs. actuals, a public GitHub history showing our reasoning, and a live web application ([IRIS 2.0](#iris-20-the-product)) that any user can access to see our analysis.
+By Week 10, we will have a 10-sprint track record of predictions vs. actuals, a public GitHub history showing our reasoning, and a live web application that any user can access to see our analysis.
 
 ---
 
@@ -89,23 +89,18 @@ May be not up to date
 team1-prac-a-project/
 ├── README.md                          # This file
 ├── CONTRIBUTING.md                    # Git workflow & coding standards
-│
-├── /sprints/                          # Sprint metadata
-│   ├── sprint_goal_W2.md
-│   ├── acceptance_criteria_W2.md
-│   └── retrospective_W2.md (after sprint closes)
-│
+├── LICENCE.md                         # Project licencing 
+├── /.github/                          # GitHub Actions
+├── /sprints/                          # Sprint details
 ├── /data/
 │   ├── /evidence/                     # Data & screenshots 
-│   ├── /almanac/                      # Seasonal analysis
-│   │   └── almanac_agent_W2.md        # Week 2 output
+│   ├── /almanac/                      # Analysis from Investors Almanac
 │   ├── /macro/                        # Fundamental analysis
-│   │   └── macro_agent_W2.md          # Week 2 output
-│   ├── /technical/                    # Chart analysis
-│   │   ├── technical_agent_W2.md      # Week 2 output
-│   │   └── charts/
-│   │       └── (annotated screenshots)
+│   ├── /technical/                    # Technical anylysis
+│   ├── /charts/                       # Charts Screenshots
+│   ├── /llm/                          # LLM outputs and comparisons
 │   ├── /formats/                      # Formats for each agent
+│   ├── /human/                        # Human predictions
 │
 └── /presentations/                    # Class presentations
 ```
