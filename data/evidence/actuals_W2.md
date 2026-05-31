@@ -1,58 +1,86 @@
-# Week 2 Actual Performance Scorecard & Data Trail
+# Week 02 Market Report (2026)
 
-## 1. Core Macro Assets Performance (Sourced from Finviz 1W View)
-* **Nasdaq 100 (NDX)**: +2.86% Weekly Change | Direction: Up | Data Sourced via Finviz 1W Performance Chart.
-* **Russell 2000 (IWM)**: +1.82% Weekly Change | Direction: Up | Data Sourced via Finviz 1W Performance Chart.
-* **S&P 500 (SPX)**: +1.40% Weekly Change | Direction: Up | Data Sourced via Finviz 1W Performance Chart.
-* **Gold**: +0.81% Weekly Change | Direction: Up | Data Sourced via Finviz 1W Performance Chart.
-* **10-Year Yield (10 Year Note)**: +0.76% Weekly Change | Direction: Up | Data Sourced via Finviz 1W Performance Chart.
-* **Bitcoin**: -3.06% Weekly Change | Direction: Down | Data Sourced via Finviz 1W Performance Chart.
-* **Crude Oil (WTI)**: -9.57% Weekly Change | Direction: Down | Data Sourced via Finviz 1W Performance Chart.
-* **VIX**: -9.95% Weekly Change | Direction: Down | Data Sourced via Finviz 1W Performance Chart.
+**Week ended:** Friday, May 29, 2026  
+**Days the market was open:** 4 (closed Monday for Memorial Day)
 
-| Asset | Weekly % Change | Directional Accuracy vs. Last Week's Prediction |
-| :--- | :---: | :---: |
-| **Nasdaq 100 (NDX)** | +2.86% | **HIT** (Predicted: Up) |
-| **Russell 2000 (IWM)** | +1.82% | **HIT** (Predicted: Up) |
-| **S&P 500 (SPX)** | +1.40% | **HIT** (Predicted: Up) |
-| **Gold** | +0.81% | **MISS** (Predicted: Down / Actual: Up) |
-| **10-Year Yield** | +0.76% | **HIT** (Predicted: Up) |
-| **Bitcoin** | -3.06% | **HIT** (Predicted: Down) |
-| **Crude Oil (WTI)** | -9.57% | **HIT** (Predicted: Down) |
-| **VIX** | -9.95% | **HIT** (Predicted: Down) |
+This file lists how the main markets moved last week. **Closing value** = price at the end of Friday. **Weekly change** = up or down for the whole week.
 
 ---
 
-## 2. S&P 11 Sectors Performance (Sourced from Yahoo Finance Daily Heatmap & Finviz 5D)
-* **Top 3 Leading Sectors for Week 22:**
-  1. **Technology (XLK):** +1.98% Weekly Momentum (Led heavily by AVGO +7.77%, MSFT +7.43%, AAPL +2.32%)
-  2. **Financial Services (XLF):** +0.58% (Supported by BAC +0.21%)
-  3. **Basic Materials (XLB):** +0.17%
+## Main Stock Indexes (3 we track)
 
-* **Bottom 3 Lagging Sectors for Week 22:**
-  1. **Consumer Defensive (XLP):** -1.83% (Dragged by WMT -4.61% and COST -8.96%)
-  2. **Communication Services (XLC):** -1.50% (Dragged by GOOGL -1.89% and NFLX -3.67%)
-  3. **Energy (XLE):** -0.90% (Dragged by XOM -6.46% and CVX -4.48%)
+These are the big U.S. stock benchmarks we score each week.
 
-| Sector Group | Weekly % Change (Return) | Data Trail Verification Status |
-| :--- | :---: | :--- |
-| **Technology** | +1.98% | Verified via `Screenshot 2026-05-30 061859.png` |
-| **Financial Services** | +0.58% | Verified via `Screenshot 2026-05-30 061859.png` |
-| **Basic Materials** | +0.17% | Verified via `Screenshot 2026-05-30 061859.png` |
-| **Real Estate** | -0.44% | Verified via Heatmap Data Trail |
-| **Utilities** | -0.53% | Verified via Heatmap Data Trail |
-| **Healthcare** | -0.60% | Verified via `Screenshot 2026-05-30 061859.png` |
-| **Industrials** | -0.64% | Verified via `Screenshot 2026-05-30 061859.png` |
-| **Consumer Cyclical** | -0.80% | Verified via `Screenshot 2026-05-30 061859.png` |
-| **Energy** | -0.90% | Verified via `Screenshot 2026-05-30 061859.png` |
-| **Communication Services** | -1.50% | Verified via `Screenshot 2026-05-30 061859.png` |
-| **Consumer Defensive** | -1.83% | Verified via `Screenshot 2026-05-30 061859.png` |
+| What it is | Short name | Price at Friday close | Up or down this week |
+|------------|------------|----------------------|----------------------|
+| S&P 500 — large U.S. companies | SPX | 7,580.06 | **Up 1.40%** |
+| Nasdaq 100 — mostly tech | NDX | 30,333.18 | **Up 2.86%** |
+| Russell 2000 — smaller companies | IWM | 290.43 | **Up 1.82%** |
+
+**In plain words:** All three went up. Tech (Nasdaq) did best. Small companies did well too. The S&P 500 hit a new high — that’s **9 weeks in a row** it has gone up.
 
 ---
 
-## 3. Data Integrity & Verification Audit Trail
-* **Data Sources Used:** Finviz Futures (1W View) & Finviz S&P 500 Heatmap (1W View)
-* **Data Retrieval Date:** Saturday, May 30, 2026
-* **Archive Artifacts Attached:**
-  * `evidence/finviz_1W_2026-W2_Sat.png`
-  * `evidence/finviz_sectors_5D_2026_W2_Sat.png`
+## Other Important Markets
+
+Gold, oil, bonds, fear gauge (VIX), and crypto.
+
+| What it is | Friday close | Up or down this week |
+|------------|--------------|----------------------|
+| **Gold** | $4,560 per ounce | **Up 0.81%** |
+| **Oil** (U.S. crude) | $87.36 per barrel | **Down 9.57%** |
+| **10-Year interest rate** | 4.45% | **Slightly lower** (about 0.12 points) |
+| **Bonds** (TLT fund) | $85.76 | **Up 1.28%** |
+| **VIX** (how scared traders are; lower = calmer) | 15.32 | **Down 9.95%** |
+| **Bitcoin** | $73,372 | **Down 3.06%** |
+
+**In plain words:** Stocks felt calmer (VIX dropped a lot). Oil fell hard — partly on news about a possible Iran ceasefire. Gold and bonds edged up. Bitcoin slipped a bit.
+
+---
+
+## 11 Parts of the Stock Market (S&P sectors)
+
+Each row is one industry group in the S&P 500.
+
+| Rank | Industry group | Up or down this week |
+|------|----------------|----------------------|
+| 1 | Technology | **Up 5.89%** |
+| 2 | Materials (chemicals, metals, etc.) | **Up 1.71%** |
+| 3 | Consumer discretionary (cars, hotels, shopping) | **Up 1.42%** |
+| 4 | Industrials | Up 0.79% |
+| 5 | Communication (phones, media, ads) | Up 0.20% |
+| 6 | Health care | Down 0.28% |
+| 7 | Financials (banks, insurance) | Down 0.69% |
+| 8 | Real estate | Down 1.28% |
+| 9 | Utilities (power, water) | Down 2.05% |
+| 10 | Consumer staples (food, toothpaste, etc.) | Down 2.23% |
+| 11 | Energy (oil & gas companies) | **Down 5.38%** |
+
+### Best 3 this week
+1. **Technology** — up 5.89%. Big wins from AI and tech earnings (e.g. Dell, Microsoft, chip stocks).
+2. **Materials** — up 1.71%.
+3. **Consumer discretionary** — up 1.42%.
+
+### Worst 3 this week
+1. **Energy** — down 5.38%. Oil prices fell, so energy stocks fell with them.
+2. **Consumer staples** — down 2.23%. Stores like Walmart and Costco struggled.
+3. **Utilities** — down 2.05%.
+
+**In plain words:** The overall market went up, but **most** industry groups actually went down. Tech carried the week — a few strong areas pulled the index up while many others were flat or red.
+
+---
+
+## Charts & Screenshots
+
+Saved in the **evidence** folder:
+
+| What the picture shows | File name |
+|------------------------|-----------|
+| 1-week performance (Finviz) | [finviz_1W_2026-W2_Sat.png.png](./finviz_1W_2026-W2_Sat.png.png) |
+| S&P 500 map by sector (Finviz) | [finviz_sectors_5D_2026_W2_Sat.png.png](./finviz_sectors_5D_2026_W2_Sat.png.png) |
+
+## Where the numbers came from
+
+- Finviz screenshot (weekly % for indexes and macro)
+- ProRealTime charts (Friday closing prices for SPX, NDX, IWM)
+- Sector funds (XLK, XLE, etc.) for the 11 industry groups
