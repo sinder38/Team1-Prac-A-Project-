@@ -41,6 +41,8 @@ Midterm-year seasonality remains unfavorable, with May historically weaker in el
 
 Only 57% of S&P 500 stocks remain above their 200-day moving average. While the index itself remains technically strong, broader market participation remains relatively narrow. This suggests the rally may be more fragile than headline index performance implies.
 
+
+
 ## INVALIDATION CONDITIONS
 
 Our bullish-neutral thesis is wrong if:
@@ -52,3 +54,10 @@ Our bullish-neutral thesis is wrong if:
 (c) A major inflation surprise shifts Fed expectations toward a more hawkish path
 
 (d) Market breadth deteriorates further while SPX fails to break above 7,500 resistance
+
+
+## Final Prediction
+
+**SPX: +0.2% to +1.0%**
+
+**Direction:** Neutral-Bullish
