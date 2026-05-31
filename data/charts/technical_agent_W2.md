@@ -31,8 +31,11 @@ BREADTH NOTE:
   - Many large companies are participating in the move up. The overall market looks healthy going into the new week.
 
 TECHNICAL BIAS: Bullish (expecting higher prices)
+
 CONFIDENCE: High
+
 INVALIDATION: If price closes below 7,500, the outlook turns less positive.
+
 WATCH THIS WEEK: Does price hold above 7,516 on any dip? Can it reach 7,600 without getting stuck?
 
 ---
@@ -64,8 +67,11 @@ BREADTH NOTE:
   - Tech is leading the market. Of the three indexes reviewed, Nasdaq has the widest gap between its two average lines — the strongest uptrend.
 
 TECHNICAL BIAS: Bullish (expecting higher prices)
+
 CONFIDENCE: High
+
 INVALIDATION: If price closes below 29,600, the outlook turns less positive.
+
 WATCH THIS WEEK: Can Nasdaq push toward 30,500 without pulling back too much? Does 29,696 hold if price dips during the week?
 
 ---
@@ -97,6 +103,9 @@ BREADTH NOTE:
   - Small-cap stocks are starting to catch up. If price stays above 285–290, it suggests more investors are willing to take risk.
 
 TECHNICAL BIAS: Neutral-Bullish (leaning up, but less certain than SPX or Nasdaq)
+
 CONFIDENCE: Medium
+
 INVALIDATION: If price closes below 285.00, the outlook turns less positive and price may drift back into its old range.
+
 WATCH THIS WEEK: Can small caps stay above 285.69 and move toward 295? Or do they slide back into the sideways pattern?
