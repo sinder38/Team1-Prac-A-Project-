@@ -1,3 +1,9 @@
 # Wildignore
 .*
 !.gitignore
+
+# Python
+__pycache__
+
+# GitHub
+!.github
