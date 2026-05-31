@@ -13,4 +13,5 @@ What Team needs to do:
 
 What does "done" look like this week?
 
--> The team should be having the files that need to commit as a branch from the main of the team github to ensure and proof that each member already know their roles , read the book and understand what they need to do for the upcoming. Not only that the team need to show interaction , engaging and constanly update in team discord as showing their responsibilitie.  
+-> The team should be having the files that need to commit as a branch from the main of the team github to ensure and proof that each member already know their roles , read the book and understand what they need to do for the upcoming. Not only that the team need to show interaction , engaging and constanly update in team discord as showing their responsibilitie. To create a clean, evidence-based market prediction process where every team member can contribute clearly, all files are committed to GitHub, and the final SPX, NDX, and IWM prediction is supported by structured reasoning, AI comparison, and human judgement.
+
