@@ -24,7 +24,7 @@ RULES: List[Rule] = [
     # ── Header / preamble ─────────────────────────────────────────────────
     LineMatch(
         name="Title line",
-        pattern=re.compile(r"^Almanac Agent Output Template — Week of .+"),
+        pattern=re.compile(r"^Almanac Agent Output — Week of .+"),
         line_hint="Line 1",
         required=True,
     ),
@@ -47,7 +47,7 @@ RULES: List[Rule] = [
     BulletCount(
         name="MONTHLY STATS — S&P 500 bullet",
         section_header=re.compile(r"^MONTHLY STATS:"),
-        bullet_pattern=re.compile(r"^\s+-\s+S&P 500:"),
+        bullet_pattern=re.compile(r"^\s*-\s+S&P 500:"),
         min_count=1,
         max_count=1,
         required=True,
@@ -55,7 +55,7 @@ RULES: List[Rule] = [
     BulletCount(
         name="MONTHLY STATS — Nasdaq bullet",
         section_header=re.compile(r"^MONTHLY STATS:"),
-        bullet_pattern=re.compile(r"^\s+-\s+Nasdaq"),
+        bullet_pattern=re.compile(r"^\s*-\s+Nasdaq"),
         min_count=1,
         max_count=1,
         required=True,
@@ -63,7 +63,7 @@ RULES: List[Rule] = [
     BulletCount(
         name="MONTHLY STATS — Russell 2000 bullet",
         section_header=re.compile(r"^MONTHLY STATS:"),
-        bullet_pattern=re.compile(r"^\s+-\s+Russell 2000:"),
+        bullet_pattern=re.compile(r"^\s*-\s+Russell 2000:"),
         min_count=1,
         max_count=1,
         required=True,
@@ -84,7 +84,7 @@ RULES: List[Rule] = [
         name="SECTOR SIGNALS — at least one sector entry",
         section_header=re.compile(r"^SECTOR SIGNALS:"),
         bullet_pattern=re.compile(
-            r"^\s+-\s+\w+.*seasonal\s+(SHORT|LONG)", re.IGNORECASE
+            r"^\s*-\s+\w+.*seasonal\s+(SHORT|LONG)", re.IGNORECASE
         ),
         min_count=1,
         max_count=None,
