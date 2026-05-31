@@ -27,6 +27,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from rules import REGISTRY
 from rules.base import Finding
+from rules import AgentSpec
 
 
 def _supports_color() -> bool:
@@ -64,13 +65,50 @@ def _format_pass(rule_name: str, agent: str) -> str:
     return f"  {_sev_color('PASS')}  {agent} › {rule_name}"
 
 
-def validate(agent_type: str, text: str) -> list[Finding]:
-    rules = REGISTRY[agent_type]
-    lines = text.splitlines()
+def _run_rules(rules, lines) -> list[Finding]:
     findings: list[Finding] = []
     for rule in rules:
         findings.extend(rule.check(lines))
     return findings
+
+
+def validate(agent_type: str, text: str) -> list[tuple[str, list[Finding]]]:
+    """
+    Returns a list of (block_label, findings) pairs.
+    Single-block agents return one pair with label "".
+    Multi-block agents (e.g. technical_agent) return one pair per instrument.
+    """
+    spec: AgentSpec = REGISTRY[agent_type]
+    lines = text.splitlines()
+
+    if spec.split_blocks:
+        blocks = spec.split_blocks(lines)
+        return [(label, _run_rules(spec.rules, block_lines))
+                for label, block_lines in blocks]
+    else:
+        return [("", _run_rules(spec.rules, lines))]
+
+
+def _print_block(block_label: str, findings: list[Finding], rules, agent: str, verbose: bool) -> tuple[int, int, int]:
+    """Print results for one block. Returns (pass, warn, fail) counts."""
+    if block_label:
+        print(f"\n  {BOLD}── {block_label}{RESET}")
+
+    failed_names = {f[1] for f in findings if f[0] == "FAIL"}
+    warned_names = {f[1] for f in findings if f[0] == "WARN"}
+
+    for rule in rules:
+        rule_findings = [f for f in findings if f[1] == rule.name]
+        if rule_findings:
+            for f in rule_findings:
+                print(_format_finding(f, agent))
+        elif verbose:
+            print(_format_pass(rule.name, agent))
+
+    fail_count = len(failed_names)
+    warn_count = len(warned_names)
+    pass_count = len(rules) - fail_count - warn_count
+    return pass_count, warn_count, fail_count
 
 
 def run(agent_type: str, filepath: Path, verbose: bool = False) -> int:
@@ -86,37 +124,35 @@ def run(agent_type: str, filepath: Path, verbose: bool = False) -> int:
         return 2
 
     text = filepath.read_text(encoding="utf-8")
-    findings = validate(agent_type, text)
+    blocks = validate(agent_type, text)
+    spec = REGISTRY[agent_type]
+    rules = spec.rules
 
-    rules = REGISTRY[agent_type]
-    failed_names = {f[1] for f in findings if f[0] == "FAIL"}
-    warned_names = {f[1] for f in findings if f[0] == "WARN"}
+    print(f"\n{BOLD}Validating:{RESET} {filepath}  ({agent_type})")
+    if len(blocks) > 1:
+        print(f"  {len(blocks)} instrument blocks found")
 
-    print(f"\n{BOLD}Validating:{RESET} {filepath}  ({agent_type})\n")
+    total_pass = total_warn = total_fail = 0
+    for block_label, findings in blocks:
+        p, w, f = _print_block(block_label, findings, rules, agent_type, verbose)
+        total_pass += p
+        total_warn += w
+        total_fail += f
 
-    for rule in rules:
-        rule_findings = [f for f in findings if f[1] == rule.name]
-        if rule_findings:
-            for f in rule_findings:
-                print(_format_finding(f, agent_type))
-        elif verbose:
-            print(_format_pass(rule.name, agent_type))
-
-    fail_count = len(failed_names)
-    warn_count = len(warned_names)
-    pass_count = len(rules) - len(failed_names) - len(warned_names)
+    rules_per_block = len(rules)
+    total_rules = rules_per_block * len(blocks)
 
     print(f"\n{'─' * 60}")
     print(
-        f"  {GREEN}{pass_count} passed{RESET}"
-        f"  {YELLOW}{warn_count} warnings{RESET}"
-        f"  {RED}{fail_count} failed{RESET}"
-        f"  ({len(rules)} rules total)"
+        f"  {GREEN}{total_pass} passed{RESET}"
+        f"  {YELLOW}{total_warn} warnings{RESET}"
+        f"  {RED}{total_fail} failed{RESET}"
+        f"  ({total_rules} checks across {len(blocks)} block(s))"
     )
 
-    if fail_count > 0:
+    if total_fail > 0:
         print(
-            f"\n{RED}RESULT: FAIL{RESET} — {fail_count} required check(s) did not pass.\n"
+            f"\n{RED}RESULT: FAIL{RESET} — {total_fail} required check(s) did not pass.\n"
         )
         return 1
 
@@ -161,8 +197,9 @@ def main() -> None:
     if args.list:
         print("Known agent types:")
         for name in sorted(REGISTRY):
-            rule_count = len(REGISTRY[name])
-            print(f"  {name}  ({rule_count} rules)")
+            spec = REGISTRY[name]
+            multi = "  [multi-block]" if spec.split_blocks else ""
+            print(f"  {name}  ({len(spec.rules)} rules){multi}")
         sys.exit(0)
 
     if not args.agent_type or not args.output_file:
