@@ -1,0 +1,170 @@
+name: agent-checks
+
+on:
+  push:
+    paths:
+      - "data/macro/**"
+      # - 'data/almanac/**'
+      - "data/technical/**"
+      - "data/llm/**"
+  pull_request:
+    paths:
+      - "data/macro/**"
+      # - 'data/almanac/**'
+      - "data/technical/**"
+      - "data/llm/**"
+
+jobs:
+  macro-agent:
+    name: Validate macro_agent outputs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run macro_agent format checks
+        run: |
+          set +e
+          failed=0
+          shopt -s nullglob
+          files=(data/macro/macro_agent_W*.md)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "No macro_agent_W*.md files found in data/macro/ — nothing to validate."
+            exit 0
+          fi
+          for f in "${files[@]}"; do
+            echo "::group::$f"
+            python scripts/validate_output.py macro_agent "$f"
+            code=$?
+            echo "::endgroup::"
+            if [ $code -ne 0 ]; then
+              echo "::error file=$f::macro_agent format check failed"
+              failed=1
+            fi
+          done
+          exit $failed
+
+  # almanac-agent:
+  #   name: Validate almanac_agent outputs
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: actions/setup-python@v5
+  #       with:
+  #         python-version: '3.11'
+  #     - name: Run almanac_agent format checks
+  #       run: |
+  #         set +e
+  #         failed=0
+  #         shopt -s nullglob
+  #         files=(data/almanac/almanac_agent_W*.md)
+  #         if [ ${#files[@]} -eq 0 ]; then
+  #           echo "No almanac_agent_W*.md files found in data/almanac/ — nothing to validate."
+  #           exit 0
+  #         fi
+  #         for f in "${files[@]}"; do
+  #           echo "::group::$f"
+  #           python scripts/validate_output.py almanac_agent "$f"
+  #           code=$?
+  #           echo "::endgroup::"
+  #           if [ $code -ne 0 ]; then
+  #             echo "::error file=$f::almanac_agent format check failed"
+  #             failed=1
+  #           fi
+  #         done
+  #         exit $failed
+
+  technical-agent:
+    name: Validate technical_agent outputs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run technical_agent format checks
+        run: |
+          set +e
+          failed=0
+          shopt -s nullglob
+          files=(data/technical/technical_agent_W*.md)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "No technical_agent_W*.md files found in data/technical/ — nothing to validate."
+            exit 0
+          fi
+          for f in "${files[@]}"; do
+            echo "::group::$f"
+            python scripts/validate_output.py technical_agent "$f"
+            code=$?
+            echo "::endgroup::"
+            if [ $code -ne 0 ]; then
+              echo "::error file=$f::technical_agent format check failed"
+              failed=1
+            fi
+          done
+          exit $failed
+
+  llm-agent:
+    name: Validate llm_agent outputs (all 4 models)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run llm_agent format checks
+        run: |
+          set +e
+          failed=0
+          shopt -s nullglob
+
+          # Collect all week tags present in data/llm/ (e.g. W1, W2, W22)
+          weeks=()
+          for f in data/llm/synthesis_*_W*.txt; do
+            week=$(echo "$f" | grep -oP 'W\d+')
+            weeks+=("$week")
+          done
+          # Deduplicate
+          mapfile -t weeks < <(printf '%s\n' "${weeks[@]}" | sort -u)
+
+          if [ ${#weeks[@]} -eq 0 ]; then
+            echo "No synthesis_*_W*.txt files found in data/llm/ — nothing to validate."
+            exit 0
+          fi
+
+          models=(chatgpt claude deepseek gemini)
+
+          for week in "${weeks[@]}"; do
+            echo "::group::Week $week — completeness check"
+            missing=0
+            for model in "${models[@]}"; do
+              f="data/llm/synthesis_${model}_${week}.txt"
+              if [ ! -f "$f" ]; then
+                echo "::error::Missing synthesis file: $f"
+                missing=1
+                failed=1
+              fi
+            done
+            if [ $missing -eq 0 ]; then
+              echo "All 4 model files present for $week."
+            fi
+            echo "::endgroup::"
+
+            for model in "${models[@]}"; do
+              f="data/llm/synthesis_${model}_${week}.txt"
+              [ -f "$f" ] || continue
+              echo "::group::$f"
+              python scripts/validate_output.py llm_agent "$f"
+              code=$?
+              echo "::endgroup::"
+              if [ $code -ne 0 ]; then
+                echo "::error file=$f::llm_agent format check failed"
+                failed=1
+              fi
+            done
+          done
+
+          exit $failed
