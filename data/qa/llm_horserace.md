@@ -9,27 +9,27 @@ The LLM horse race is meant to track which AI model was closest to the actual S&
 
 ## Current status
 
-Status: Not scoreable yet
+Status: Scoreable from merged R6 evidence
 
-I checked the current `main` branch and I could not find valid Week 2 raw outputs for the four LLMs. I also saw a later R6 PR with LLM files, but those files appear to forecast the June 1-5 week and mention June 5 NFP, so I cannot use them for the Week 2 horse race.
+After PR #12 was merged, the current `main` branch includes raw LLM outputs and a comparison table in `data/llm/`. I used the merged R6 comparison table as the official LLM evidence for this QA check.
 
-Because of that, I cannot honestly pick a winning model for Week 2.
+The actual SPX result was +1.40%. ChatGPT and DeepSeek both included +1.40% inside their predicted SPX range. I chose DeepSeek as the Week 2 winner because its range midpoint is slightly closer to the actual result.
 
-## What is needed from the LLM operator
+## Week 2 comparison
 
-| Model | What I need for QA |
-| --- | --- |
-| ChatGPT | SPX direction, range, confidence, and reason |
-| Claude | SPX direction, range, confidence, and reason |
-| Gemini | SPX direction, range, confidence, and reason |
-| DeepSeek | SPX direction, range, confidence, and reason |
+| Model | SPX estimate | Compared with actual +1.40% |
+| --- | ---: | --- |
+| Claude | +0.3% to +1.2% | Slightly low |
+| ChatGPT | +0.3% to +1.5% | Hit range |
+| Gemini | +0.5% to +1.2% | Slightly low |
+| DeepSeek | +0.5% to +1.5% | Hit range and closest midpoint |
 
 ## Week 2 record
 
 | Sprint | Actual SPX result | Winner | Reason |
 | --- | ---: | --- | --- |
-| Week 2 | +1.40% | N/A | No valid Week 2 raw LLM outputs found yet |
+| Week 2 | +1.40% | DeepSeek | Its SPX range included the actual result and had the closest midpoint |
 
 ## Next sprint improvement
 
-Next sprint, the raw LLM outputs should be committed before the final prediction is locked. Then R10 can compare each model fairly.
+Next sprint, the raw LLM outputs should be committed before the final prediction is locked and the comparison table should clearly state the prediction week. That will make the horse race easier to check.

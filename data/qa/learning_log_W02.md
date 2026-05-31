@@ -28,9 +28,11 @@ NDX was much stronger than the other two. That means the week was mainly led by 
 
 The other surprise is about our process. We have some good files in GitHub, but the prediction evidence is not fully clean. I could not find the original locked prediction file with confidence and percentage range on `main`.
 
+After the R6 LLM evidence was merged, I could compare the model ranges. DeepSeek was the closest model for SPX because its range included the actual +1.40% result and its midpoint was closest.
+
 ## What did we learn?
 
-Being right on direction is good, but it is not enough for this assignment. We also need to prove what we predicted before the result happened. If the locked file or confidence level is missing, R10 cannot give the full calibration score properly.
+Being right on direction is good, but it is not enough for this assignment. We also need to prove what we predicted before the result happened. If the locked file or confidence level is missing, R10 cannot give the full calibration score properly. The LLM horse race was easier to update once the comparison table was merged, so keeping all model outputs in one clear folder helps a lot.
 
 ## What will we do differently next sprint?
 
