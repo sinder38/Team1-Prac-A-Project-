@@ -1,7 +1,7 @@
 # Human Score Analyst Output — Week 2
 
 ## AI Consensus
-
+ 
 **Bullish (4 of 4 AI models)**
 
 ---
