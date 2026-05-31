@@ -1,31 +1,20 @@
-Macro Agent Output Template For R4
+Macro Agent Output — Week of 25 May — Source: R4
 
 FED & RATES (CME FedWatch + Treasury.gov):
-
 - Current Fed rate: 3.50%–3.75%
-
 - Next FOMC date: June 17, 2026. Hold probability: 99.6%. Cut probability: 0.4%. Direction vs last week: unchanged.
-
 - 2-year yield: 4.00% 10-year yield: 4.44% 30-year yield: 4.97%
-
 - Yield curve: normal. 10-year direction this week: falling.
-
 - Falling 10-year yield gives some relief to growth stocks and rate-sensitive sectors. Market still not pricing near-term Fed action.
 
 
 COMMODITIES & DOLLAR (Finviz Futures 1W):
-
 - WTI Crude Oil: weekly change -9.57%, direction: falling
-
 - Gold: weekly change +0.81%, direction: rising
-
 - DXY (Dollar): weekly change -0.34%, direction: weakening
-
 - Cross-asset implication: Oil falling is inflation relief. Lower yields and weaker dollar are generally supportive for risk assets.
 
-
 WEEK-AHEAD CALENDAR (TradingEconomics) (FROM LOW TO HIGH):
-
 - Tuesday, June 2: US JOLTS Job Openings (Apr) — Expected: 6.8M, Previous: 6.866M — IMPORTANCE: Medium
 
 Labor demand indicator. Market watching for signs of cooling employment conditions before payrolls report.
