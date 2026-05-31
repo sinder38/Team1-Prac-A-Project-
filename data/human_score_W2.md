@@ -15,7 +15,7 @@
 0
 
 ## Human Call
-
+Our final human prediction is Neutral-Bullish with medium confidence. While technical and macro conditions remain supportive, weak seasonality, narrow market breadth, and Friday's Nonfarm Payrolls report reduce our conviction compared with the AI consensus
 Neutral-Bullish
 
 ## Confidence
