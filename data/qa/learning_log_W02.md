@@ -5,7 +5,7 @@ Date checked: 31 May 2026
 
 ## What did we predict?
 
-The current actuals file records the team's direction calls as:
+At the time of this QA check, the available GitHub evidence showed the team's direction calls as:
 
 - SPX: Up
 - NDX: Up
@@ -30,7 +30,7 @@ The direction call was correct for SPX, NDX, and IWM.
 
 NDX was much stronger than the other two. That means the week was mainly led by technology. IWM also went up, but not as much as NDX.
 
-The other surprise is about our process. We have some good files in GitHub, but the prediction evidence is not fully clean. The actuals file says what we predicted, but I could not find the original prediction file with confidence and percentage range on `main`.
+The other surprise is about our process. We have some good files in GitHub, but the prediction evidence is not fully clean. I could see the team direction call, but I could not find the original locked prediction file with confidence and percentage range on `main`.
 
 ## What did we learn?
 
